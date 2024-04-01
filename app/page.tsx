@@ -10,10 +10,11 @@ export default function Home() {
     <div className="mx-auto">
       <MyProfilePic />
       <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
-        Здароу и Бобро Пожаж &nbsp;
+        Привет! &nbsp;
         <span className="whitespace-nowrap">
           Я <span className="font-bold"> Егор </span>
         </span>
+        А это тестовый блог на NEXT.JS
       </p>
       <Posts />
     </div>
