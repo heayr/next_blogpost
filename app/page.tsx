@@ -14,7 +14,7 @@ export default function Home() {
         <span className="whitespace-nowrap">
           Я <span className="font-bold"> Егор </span>
         </span>
-        а, это тестовый блог на NEXT.JS
+        , а это тестовый блог на NEXT.JS
       </p>
       <Posts />
     </div>
