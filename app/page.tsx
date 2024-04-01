@@ -12,9 +12,9 @@ export default function Home() {
       <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
         Привет! &nbsp;
         <span className="whitespace-nowrap">
-          Я <span className="font-bold"> Егор </span>
+          Я <span className="font-bold"> Егор </span>,
         </span>
-        , а это тестовый блог на NEXT.JS
+        а это тестовый блог на NEXT.JS
       </p>
       <Posts />
     </div>
