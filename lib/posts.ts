@@ -9,12 +9,11 @@ type Filetree = {
     "tree": [
         {
             "path": string,
-        }
-    ]
+        }],
+    // ]https://raw.githubusercontent.com/heayr/mdx-files-for-blogpost/main/ssg-ssr.mdx
 }
-
 export async function getPostByName(fileName: string): Promise<BlogPost | undefined> {
-    const res = await fetch(`https://raw.githubusercontent.com/gitdagray/test-blogposts/main/${fileName}`, {
+    const res = await fetch(`https://raw.githubusercontent.com/heayr/mdx-files-for-blogpost/main/${fileName}`, {
         headers: {
             Accept: 'application/vnd.github+json',
             Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
@@ -48,15 +47,17 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
         }
     })
 
+    // const id = fileName.replace(/\.mdx$/, '')
     const id = fileName.replace(/\.mdx$/, '')
 
     const blogPostObj: BlogPost = { meta: { id, title: frontmatter.title, date: frontmatter.date, tags: frontmatter.tags }, content }
 
     return blogPostObj
 }
+// https://github.com/heayr/mdx-files-for-blogpost
 
 export async function getPostsMeta(): Promise<Meta[] | undefined> {
-    const res = await fetch('https://api.github.com/repos/gitdagray/test-blogposts/git/trees/main?recursive=1', {
+    const res = await fetch('https://api.github.com/repos/heayr/mdx-files-for-blogpost/git/trees/main?recursive=1', {
         headers: {
             Accept: 'application/vnd.github+json',
             Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
